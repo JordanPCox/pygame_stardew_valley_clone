@@ -5,7 +5,8 @@ class Game:
     def __init__(self):
         pygame.init()
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-        self.clock = oygame.time.Clock()
+        pygame.display.set_caption('Sprout Land')
+        self.clock = pygame.time.Clock()
 
     def run(self):
         while True:
@@ -16,3 +17,7 @@ class Game:
 
             dt = self.clock.tick() / 1000
             pygame.display.update()
+
+if __name__ == '__main__':
+    game = Game()
+    game.run()
